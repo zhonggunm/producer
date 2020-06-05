@@ -1,0 +1,42 @@
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://mypostgres:5432/dvdrental
+#    username: postgres
+#    password: cms@spring
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    show-sql: true
+#    generate-ddl: false
+
+spring:
+ 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/qx
+    username: postgres
+    password: cms@spring
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    generate-ddl: true
+
+kafka:
+  bootstrapAddress: localhost:9093
+  producer:
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    
+message:
+  topic:
+    name: testItem      
+    
+partitioned:
+  topic:
+    name: orderItem      
+    
+filtered:
+  topic:
+    name: orderItem      
+    
+greeting:
+  topic:
+    name: test
